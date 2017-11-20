@@ -1,3 +1,4 @@
+import indexCss from './aa.css';
 import {
 	a as aa,
 	b as bb,

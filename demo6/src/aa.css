@@ -1,0 +1,10 @@
+body{
+    background: #ccc;
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background: pink;
+    text-align: center;
+    line-height: 200px;
+}
