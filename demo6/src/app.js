@@ -5,3 +5,6 @@ import {
 	c as cc
 } from './a.js'
 console.log(aa, bb, cc);
+box.onclick = function(){
+	alert(1);
+}

@@ -82,8 +82,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/.0.28.7@css-loader/index.js!./aa.css", function() {
-			var newContent = require("!!../node_modules/.0.28.7@css-loader/index.js!./aa.css");
+		module.hot.accept("!!../node_modules/.0.28.7@css-loader/index.js!../node_modules/.6.0.6@sass-loader/lib/loader.js!./a.scss", function() {
+			var newContent = require("!!../node_modules/.0.28.7@css-loader/index.js!../node_modules/.6.0.6@sass-loader/lib/loader.js!./a.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -415,7 +415,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, "body{\n    background: #ccc;\n}\n#box{\n    height: 200px;\n    width: 200px;\n    background: pink;\n    text-align: center;\n    line-height: 200px;\n}", ""]);
+exports.push([module.i, "body {\n  background: #ccc; }\n  body li {\n    height: 30px;\n    line-height: 30px;\n    border-bottom: 1px dashed #000; }\n", ""]);
 
 // exports
 
@@ -604,18 +604,15 @@ function toComment(sourceMap) {
 "use strict";
 
 
-var _aa = __webpack_require__(0);
-
-var _aa2 = _interopRequireDefault(_aa);
-
 var _a = __webpack_require__(1);
+
+var _a2 = __webpack_require__(0);
+
+var _a3 = _interopRequireDefault(_a2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log(_a.a, _a.b, _a.c);
-box.onclick = function () {
-	alert(1);
-};
 
 /***/ })
 /******/ ]);
