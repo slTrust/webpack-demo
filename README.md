@@ -37,9 +37,9 @@ module.exports ={
     }
 }
 ```
-
+----------------------------------------------
 ## demo2 多个js引入
-
+> 这个是按顺序的打包js
 ```
 module.exports = {
     context:__dirname+'/src',
@@ -54,8 +54,10 @@ module.exports = {
     }
 }
 ```
-
+----------------------------------------------
 ## demo3 多个输出
+> 多个输出的文件名为其对应的 key值
+```
 module.exports = {
     context:__dirname+'/src',
     entry:{
@@ -71,7 +73,8 @@ module.exports = {
         filename:'[name].bundle.js'
     }
 }
-
+```
+----------------------------------------------
 ## demo4提取公共js
 
 ```
@@ -99,7 +102,7 @@ module.exports = {
 	],
 }
 ```
-
+----------------------------------------------
 ## demo5 热更新
 ```
 const webpack = require('webpack');
@@ -129,7 +132,7 @@ module.exports = {
 	//script 标签中的 /assets 对应的是 output.publicPath 的值
 	//需要在本地安装 webpack webpack-dev-server
 ```
-
+----------------------------------------------
 ## demo6 es6转换 和加载css样式
 > 先运行这个安装必要的几个模块
 ```
@@ -140,13 +143,6 @@ cnpm i babel-loader babel-core babel-preset-es2015 style-loader@0.16.1 css-loade
 ,还要额外注意  webpack2不支持简写['style','css']的形式
 ### 还有会如果把babel写在这里的配置方法会提示一个警告信息提示
 > DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic, see https://github.com/webpack/loader-utils/issues/56 parseQuery() will be replaced with getOptions() in the next major version of loader-utils.
-> 解决方案是当前目录新建一个 .babelrc文件  内容如下
-```
-{
-    "presets": ["es2015"]
-}
-```
-----------------------------------------------
 ```
 rules: [{
 			test: /\.js$/,
@@ -158,6 +154,14 @@ rules: [{
 			}]
 		}]
 ```
+> 解决方案是当前目录新建一个 .babelrc文件  内容如下
+```
+{
+    "presets": ["es2015"]
+}
+```
+
+> 最终配置如下：
 
 ```
 module.exports = {
@@ -196,3 +200,4 @@ module.exports = {
 	}
 };
 ```
+--------------------------------
