@@ -1,0 +1,22 @@
+body{
+    background:pink;
+}
+
+#header{
+    height: 80px;
+    position: fixed;
+    top:0;
+    background:#0dc;
+    #nav{
+        background:#fff;
+        div{
+            float:left;
+            padding:10px 5px;
+            line-height: 30px;
+        }
+    }
+}
+#footer{
+    height: 80px;
+    background:#0dc;
+}
